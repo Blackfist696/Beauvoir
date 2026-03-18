@@ -86,3 +86,10 @@ cursor:pointer;
 button:hover{
 background:#1a252f;
 }
+
+textarea{
+margin-top: 5px;
+padding:8px;
+width:500px;
+height:50px;
+}
