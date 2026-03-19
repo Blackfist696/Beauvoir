@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Recherche étudiant</title>
+<title>Étudiants absents</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -11,7 +11,7 @@
 <header>
     <h1>École de Beauvoir</h1>
     <img src="../img/DeBeauvoir.jpg" alt="Logo de l'école" class="logo">
-    <h2>Recherche étudiant</h2>
+    <h2>Sorties justifiées</h2>
 </header>
 
 <nav>
@@ -28,36 +28,38 @@
 
 <div class="card">
 
-<h2>Rechercher</h2>
-
-<input type="text" placeholder="Nom ou ID étudiant">
-<button>Rechercher</button>
-
-</div>
-
-<div class="card">
-    <h2>Résultats de la recherche</h2>
+    <h3>Liste des sorties justifiées du jour</h3>
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Date</th>
+                <th>Heure</th>
                 <th>Nom</th>
-                <th>Prénom</th>
                 <th>Classe</th>
                 <th>Statut</th>
+                <th>Raison</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>12345</td>
-                <td>Dupont</td>
-                <td>Jean</td>
+                <td>16/03/2026</td>
+                <td>14h20</td>
+                <td>Martin Dupont</td>
                 <td>4B</td>
-                <td class="status-ok">Présent</td>
+                <td class="status-ok">Sortie justifiée</td>
+                <td>Dentiste à 14h00</td>
+            </tr>
+            <tr>
+                <td>16/03/2026</td>
+                <td>14h25</td>
+                <td>Lucas Bernard</td>
+                <td>3A</td>
+                <td class="status-ok">Sortie justifiée</td>
+                <td>Rendez-vous médical à 14h30</td>
             </tr>
         </tbody>
     </table>
-
+</div>
 
 </div>
 

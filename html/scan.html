@@ -9,42 +9,39 @@
 <body>
 
 <header>
-<img src="../img/DeBeauvoir.jpg" alt="Logo de l'école" class="logo">
-<h1>Scanner étudiant</h1>
+    <h1>École de Beauvoir</h1>
+    <img src="../img/DeBeauvoir.jpg" alt="Logo de l'école" class="logo">
+    <h2>Scanner étudiant</h2>
 </header>
 
 <nav>
-<a href="dashboard.html">Dashboard</a>
-<a href="scan.html">Scanner</a>
-<a href="absent.html">Absents</a>
-<a href="exits.html">Sorties autorisées</a>
-<a href="search.html">Recherche</a>
-<a href="historical.html">Historique</a>
+    <a href="dashboard.html">Tableau de bord</a>
+    <a href="scan.html">Scanner</a>
+    <a href="manualEncoding.html">Encodage manuel</a>
+    <a href="absent.html">Absents</a>
+    <a href="justifiedOutings.html">Sorties justifiées</a>
+    <a href="search.html">Recherche</a>
+    <a href="historical.html">Historique</a>
 </nav>
 
 <div class="container">
 
 <div class="card">
 
-<h2>Scanner la carte étudiant</h2>
+    <h3>Scanner la carte étudiant</h3>
 
-<p>Nom : Martin Dupont</p>
-<p>Classe : 4B</p>
-<p>Passage : Sortie midi</p>
+    <p>Nom : Martin Dupont</p>
+    <p>Classe : 4B</p>
+    <p>Passage : Sortie midi</p>
 
-<p class="status-ok">AUTORISÉ</p>
-<button>Scanner une autre carte</button>
+    <p class="status-ok">AUTORISÉ</p>
+    <button>Scanner une autre carte</button>
 </div>
 
 <div class="card">
-<textarea placeholder="Raison de la sortie exceptionnelle">Dentiste à 14h00</textarea>
-<br>
-<button>Explications pour sortie exceptionnelle</button>
-
-</div>
-<div class="card">
-
+    <h3>Horaire de l'étudiant</h3>
     <table>
+        <thead>
         <tr>
             <td>8h00</td>
             <td>8h50</td>
@@ -57,6 +54,8 @@
             <td>14h40</td>
             <td>15h30</td>
         </tr>
+        </thead>
+        <tbody>
         <tr>
             <td>Mathématiques</td>
             <td>Français</td>
@@ -69,7 +68,8 @@
             <td>Musique</td>
             <td>Technologie</td>
         </tr>
-        </table>    
+        </tbody>
+    </table>    
 </div>
 
 </body>

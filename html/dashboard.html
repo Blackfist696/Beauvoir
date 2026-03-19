@@ -9,66 +9,80 @@
 <body>
 
 <header>
-<img src="../img/DeBeauvoir.jpg" alt="Logo de l'école" class="logo">
-<h1>Tableau de bord - École de Beauvoir</h1>
+    <h1>École de Beauvoir</h1>
+    <img src="../img/DeBeauvoir.jpg" alt="Logo de l'école" class="logo">
+    <h2>Tableau de bord</h2>
 </header>
 
 <nav>
-<a href="dashboard.html">Dashboard</a>
-<a href="scan.html">Scanner</a>
-<a href="absent.html">Absents</a>
-<a href="exits.html">Sorties autorisées</a>
-<a href="search.html">Recherche</a>
-<a href="historical.html">Historique</a>
+    <a href="dashboard.html">Tableau de bord</a>
+    <a href="scan.html">Scanner</a>
+    <a href="manualEncoding.html">Encodage manuel</a>
+    <a href="absent.html">Absents</a>
+    <a href="justifiedOutings.html">Sorties justifiées</a>
+    <a href="search.html">Recherche</a>
+    <a href="historical.html">Historique</a>
 </nav>
 
 <div class="container">
 
 <div class="card">
-<h2>Statistiques du jour</h2>
-<p>Entrées matin : 642</p>
-<p>Sorties midi : 312</p>
-<p>Présents : 601</p>
-<p>Absents : 41</p>
+    <h2>Statistiques du jour</h2>
+    <p>Entrées matin : 642</p>
+    <p>Sorties midi : 312</p>
+    <p>Présents : 601</p>
+    <p>Absents : 41</p>
 </div>
 
 <div class="card">
-<h2>Derniers passages</h2>
-
-<table>
-
-<tr>
-<th>Date</th>
-<th>Heure</th>
-<th>Nom</th>
-<th>Classe</th>
-<th>Passage</th>
-<th>Statut</th>
-</tr>
-
-<tr>
-<td>16/03/2026</td>
-<td>08:02</td>
-<td>Martin Dupont</td>
-<td>4B</td>
-<td>Entrée</td>
-<td class="status-ok">OK</td>
-</tr>
-
-<tr>
-<td>16/03/2026</td>
-<td>12:03</td>
-<td>Lucas Martin</td>
-<td>3A</td>
-<td>Sortie midi</td>
-<td class="status-ok">Autorisé</td>
-</tr>
-
-</table>
-
+    <h2>Derniers passages</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Nom</th>
+                <th>Classe</th>
+                <th>Passage</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>16/03/2026</td>
+                <td>08:05</td>
+                <td>Dupont Martin</td>
+                <td>4B</td>
+                <td>Entrée</td>
+                <td class="status-ok">Présent</td>
+            </tr>
+            <tr>
+                <td>16/03/2026</td>
+                <td>12:10</td>
+                <td>Bernard Lucas</td>
+                <td>3A</td>
+                <td>Sortie midi</td>
+                <td class="status-ok">Autorisé</td>
+            </tr>
+            <tr>
+                <td>16/03/2026</td>
+                <td>08:02</td>
+                <td>Martin Dupont</td>
+                <td>4B</td>
+                <td>Entrée</td>
+                <td class="status-ok">OK</td>
+            </tr>
+            <tr>
+                <td>16/03/2026</td>
+                <td>12:03</td>
+                <td>Lucas Martin</td>
+                <td>3A</td>
+                <td>Sortie midi</td>
+                <td class="status-ok">Autorisé</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-
 </div>
-
 </body>
 </html>
