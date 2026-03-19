@@ -16,6 +16,7 @@ background:#34495e;
 padding:10px;
 display:flex;
 gap:15px;
+justify-content: space-between;
 }
 
 nav a{
@@ -66,7 +67,7 @@ font-weight:bold;
 }
 
 .status-info{
-color:blue;
+color:blue; 
 font-weight:bold;
 }
 
@@ -85,11 +86,4 @@ cursor:pointer;
 
 button:hover{
 background:#1a252f;
-}
-
-textarea{
-margin-top: 5px;
-padding:8px;
-width:500px;
-height:50px;
 }
