@@ -1,7 +1,10 @@
+import SessionView from "../view/sessionView";
+
 export default class SessionController {
 
     constructor() {
-        const sessionRole = sessionStorage.getItem('role');
+        this.sessionRole = sessionStorage.getItem('role') || 'user';
+        this.sessionView = new SessionView();
     }
 
     login() {
@@ -11,52 +14,16 @@ export default class SessionController {
 
 
     sessionCheck() {
-        if(sessionRole === null) {
-            fetch('../../../html/header.html')
-                .then(response => response.text())
-                .then(data => {
-                document.getElementById('header').innerHTML = data;
-                });
-            fetch('../../../html/login.html')
-                .then(response => response.text())
-                .then(data => {
-                document.getElementById('container').innerHTML = data;
-                });
+        if(this.sessionRole === null) {
+            this.sessionView.renderNull();
         } else {
-            fetch('../../../html/header.html')
-                .then(response => response.text())
-                .then(data => {
-                document.getElementById('header').innerHTML = data;
-                });
-            if(sessionRole === 'administrateur') {
-                fetch('../../../html/navAdmin.html')
-                    .then(response => response.text())
-                    .then(data => {
-                    document.getElementById('nav').innerHTML = data;
-                    });
-                dashboard();
-            } else if(sessionRole === 'administration') {
-                fetch('../../../html/navGestion.html')
-                    .then(response => response.text())
-                    .then(data => {
-                    document.getElementById('nav').innerHTML = data;
-                    });
-                    dashboard();
-            } else if(sessionRole === 'user') {
-                fetch('../../../html/navUser.html')
-                    .then(response => response.text())
-                    .then(data => {
-                    document.getElementById('nav').innerHTML = data;
-                    });
+            if(this.sessionRole === 'administrateur') {
+                this.sessionView.renderAdmin();
+            } else if(this.sessionRole === 'administration') {
+                this.sessionView.renderGestion();
+            } else if(this.sessionRole === 'user') {
+                this.sessionView.renderUser();
             }
         }
-    }
-
-    dashboard() {
-        fetch('../../../html/dashboard.html')
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById('container').innerHTML = data;
-        });
     }
 }

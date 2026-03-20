@@ -1,7 +1,14 @@
 import sessionController from "./controller/sessionController.js";
+import routeController from "./controller/routeController.js";
 
-new sessionController().sessionCheck();
+let session = new sessionController();
+let route = new routeController();
 
 window.onload = function() {
-    new sessionController().sessionCheck();
+    session.sessionCheck();
+};
+
+window.onclick = function(event) {
+    let target = event.target;
+    route.navigate(target);
 };
