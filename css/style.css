@@ -16,6 +16,7 @@ background:#34495e;
 padding:10px;
 display:flex;
 gap:15px;
+justify-content: space-between;
 }
 
 nav a{
