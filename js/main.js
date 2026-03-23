@@ -9,6 +9,7 @@ window.onload = function() {
 };
 
 window.onclick = function(event) {
+    event.preventDefault();
     let target = event.target;
     route.navigate(target);
 };
