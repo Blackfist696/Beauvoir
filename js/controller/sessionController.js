@@ -3,7 +3,7 @@ import SessionView from "../view/sessionView.js";
 export default class SessionController {
 
     constructor() {
-        this.sessionRole = sessionStorage.getItem('role') || null;
+        this.sessionRole = sessionStorage.getItem('role') || 'user';
         this.sessionView = new SessionView();
     }
 
