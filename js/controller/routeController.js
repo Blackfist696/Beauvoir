@@ -3,6 +3,9 @@ import AbsentController from './absentController.js';
 import ScanController from './scanController.js';
 import ManualEncodingController from './manualEncodingController.js';
 import JustifiedOutingsController from './justifiedOutingsController.js';
+import SearchController from './searchController.js';
+import HistoricalController from './historicalController.js';
+import GestionController from './gestionController.js';
 
 export default class RouteController {
 
@@ -21,8 +24,7 @@ export default class RouteController {
     }
 
     navigate(route) {
-        if(this.routes[route]) {
-            this.routes[route]();
+        if(this.routes.hasOwnProperty(route)) {
             switch(route) {
                 case 'logout':
                     this.logout();
@@ -48,72 +50,22 @@ export default class RouteController {
                     justifiedOutingsController.loadJustifiedOutings();
                     break;
                 case 'search':
-                    this.loadSearch();
+                    let searchController = new SearchController();
+                    searchController.loadSearch();
                     break;
                 case 'historical':
-                    this.loadHistorical();
+                    let historicalController = new HistoricalController();
+                    historicalController.loadHistorical();
                     break;
                 case 'gestion':
-                    this.loadGestion();
+                    let gestionController = new GestionController();
+                    gestionController.loadGestion();
                     break;
                 
             }
         } else {
             console.error(`Route ${route} not found`);
         }
-    }
-
-    loadScan() {
-
-    }
-
-    loadManualEncoding() {
-        fetch('../../html/manualEncoding.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('container').innerHTML = data;
-        });
-        alert('Manual Encoding loaded');
-    }
-
-    loadAbsent() {
-
-    }
-
-    loadJustifiedOutings() {
-        fetch('../../html/justifiedOutings.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('container').innerHTML = data;
-        });
-        alert('Justified Outings loaded');
-    }
-
-    loadSearch() {
-        fetch('../../html/search.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('container').innerHTML = data;
-        });
-        alert('Search loaded');
-    }
-
-    loadHistorical() {
-        fetch('../../html/historical.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('container').innerHTML = data;
-        });
-        alert('Historical loaded');
-    }
-
-    loadGestion() {
-        fetch('../../html/gestion.html')
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById('container').innerHTML = data;
-        });
-        alert('Gestion loaded');
     }
 
     logout() {

@@ -10,6 +10,5 @@ export default class JustifiedOutingsView {
             .then(data => {
                 this.container.innerHTML = data;
             });
-        alert('Justified Outings loaded');
     }
 }

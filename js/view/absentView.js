@@ -9,7 +9,6 @@ export default class AbsentView {
             .then(response => response.text())
             .then(data => {
                 this.container.innerHTML = data;
-        });
-        alert('Absent loaded');
+            });
     }
 }

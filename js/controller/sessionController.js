@@ -1,4 +1,4 @@
-import SessionView from "../view/sessionView";
+import SessionView from "../view/sessionView.js";
 
 export default class SessionController {
 

@@ -1,4 +1,4 @@
-import ScanView from "../view/scanView";
+import ScanView from "../view/scanView.js";
 
 export default class ScanController {
 

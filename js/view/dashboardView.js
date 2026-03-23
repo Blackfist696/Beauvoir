@@ -10,6 +10,5 @@ export default class DashboardView {
             .then(data => {
                 this.container.innerHTML = data;
             });
-        alert('Dashboard loaded');
     }
 }

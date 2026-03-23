@@ -1,4 +1,4 @@
-import DashboardView from "../view/dashboardView";
+import DashboardView from "../view/dashboardView.js";
 
 export default class DashboardController {
 

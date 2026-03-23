@@ -10,6 +10,5 @@ export default class SearchView {
             .then(data => {
                 this.container.innerHTML = data;
             });
-        alert('Search loaded');
     }
 }

@@ -1,11 +1,11 @@
-export default class ScanView {
+export default class GestionView {
 
     constructor() {
-        this.container = document.getElementById('container');
+        this.container = document.getElementById('app');
     }
 
     render() {
-        fetch('../../html/scan.html')
+        fetch('../../html/gestion.html')
             .then(response => response.text())
             .then(data => {
                 this.container.innerHTML = data;

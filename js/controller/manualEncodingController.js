@@ -1,4 +1,4 @@
-import ManualEncodingView from "../view/manualEncodingView";
+import ManualEncodingView from "../view/manualEncodingView.js";
 
 export default class ManualEncodingController {
 
