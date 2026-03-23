@@ -3,7 +3,7 @@ import SessionView from "../view/sessionView.js";
 export default class SessionController {
 
     constructor() {
-        this.sessionRole = sessionStorage.getItem('role') || 'user';
+        this.sessionRole = sessionStorage.getItem('role') || null;
         this.sessionView = new SessionView();
     }
 
@@ -15,7 +15,7 @@ export default class SessionController {
 
     sessionCheck() {
         if(this.sessionRole === null) {
-            this.sessionView.renderNull();
+            this.sessionView.renderLogin();
         } else {
             if(this.sessionRole === 'administrateur') {
                 this.sessionView.renderAdmin();

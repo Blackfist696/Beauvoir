@@ -6,12 +6,7 @@ export default class SessionView {
         this.nav = document.getElementById('nav');
     }
 
-    renderNull() {
-            fetch('../../html/header.html')
-                .then(response => response.text())
-                .then(data => {
-                this.header.innerHTML = data;
-                });
+    renderLogin() {
             fetch('../../html/login.html')
                 .then(response => response.text())
                 .then(data => {
@@ -20,11 +15,6 @@ export default class SessionView {
     }
 
     renderUser() {
-            fetch('../../html/header.html')
-                .then(response => response.text())
-                .then(data => {
-                this.header.innerHTML = data;
-                });
             fetch('../../html/navUser.html')
                 .then(response => response.text())
                 .then(data => {
@@ -38,11 +28,6 @@ export default class SessionView {
     }
 
     renderAdmin() {
-            fetch('../../html/header.html')
-                .then(response => response.text())
-                .then(data => {
-                this.header.innerHTML = data;
-                });
             fetch('../../html/navAdmin.html')
                 .then(response => response.text())
                 .then(data => {
@@ -56,11 +41,6 @@ export default class SessionView {
     }
 
     renderGestion() {
-            fetch('../../html/header.html')
-                .then(response => response.text())
-                .then(data => {
-                this.header.innerHTML = data;
-                });
             fetch('../../html/navGestion.html')
                 .then(response => response.text())
                 .then(data => {

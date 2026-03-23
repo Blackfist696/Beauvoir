@@ -70,7 +70,6 @@ export default class RouteController {
 
     logout() {
         sessionStorage.removeItem('role');
-        alert('Logged out');
         window.location.reload();
     }
 }
