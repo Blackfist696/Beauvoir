@@ -1,0 +1,4 @@
+10.201.140.127 {
+    tls internal
+    reverse_proxy 127.0.0.1:8000
+}
